@@ -1,0 +1,10 @@
+image: vnijs/rsm-msba-spark:1.8.6
+push:
+  script:
+    - sudo jupyter nbconvert --execute --to html tz-gaming.ipynb
+submit:
+  script:
+    - echo ""
+  only:
+    - merge_requests
+ 
